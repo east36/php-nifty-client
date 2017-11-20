@@ -6,7 +6,7 @@ $config = array(
   'access_id' => '<access-id>',
   'secret_key' => '<secret-id>',
   'user_id' => '<user-id>',
-  'api_base' => "http://api.integ.nifty.co.ke/api/v1",
+  'api_base' => "https://api.integ.nifty.co.ke/api/v1",
 );
 
 // Till details to be shared.
