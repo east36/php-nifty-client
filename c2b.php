@@ -7,7 +7,7 @@ class C2B extends NiftyClientBase
       private function c2b_url()
       {
           $url_part = '/user/'. $this->user_id. '/mpesa/c2b-confirmation';
-          return $this->url_base. $url_part;
+          return $this->api_base. $url_part;
       }
 
       /**
