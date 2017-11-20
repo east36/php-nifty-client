@@ -11,6 +11,13 @@ Installation
 
 Download the zipped package.
 
+or Run the command
+
+```bash
+$ git clone --recursive git@github.com:east36/php-nifty-client.git
+
+```
+
 Quickstart
 =============
 
