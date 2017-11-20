@@ -9,7 +9,7 @@ $config = array(
   'api_base' => "https://api.integ.nifty.co.ke/api/v1",
 );
 
-// Till details to be shared.
+// Change this to use your till details. Be careful to use the correct platform details (integ vs prod)
 $till_number = array(
   'integ' => 'xxxxxx',
   'production' => 'xxxxxx'
