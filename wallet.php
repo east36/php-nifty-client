@@ -7,7 +7,7 @@ class Wallet extends NiftyClientBase
     private function get_wallet_url()
     {
         $url_part = '/user/'. $this->user_id. '/wallet';
-        return $this->url_base. $url_part;
+        return $this->api_base. $url_part;
     }
 
     /**

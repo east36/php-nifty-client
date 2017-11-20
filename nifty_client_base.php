@@ -9,7 +9,7 @@ class NiftyClientBase
     $this->access_id = $config['access_id'];
     $this->secret_key = $config['secret_key'];
     $this->user_id = $config['user_id'];
-    $this->url_base =  $config['url_base'];
+    $this->api_base =  $config['api_base'];
   }
 
   public function get_authorisation_header($access_id, $secret_key, $type)

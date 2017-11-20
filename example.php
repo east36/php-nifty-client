@@ -6,8 +6,15 @@ $config = array(
   'access_id' => '<access-id>',
   'secret_key' => '<secret-id>',
   'user_id' => '<user-id>',
-  'url_base' => "http://api.integ.nifty.co.ke/api/v1",
+  'api_base' => "https://api.integ.nifty.co.ke/api/v1",
 );
+
+// Change this to use your till details. Be careful to use the correct platform details (integ vs prod)
+$till_number = array(
+  'integ' => 'xxxxxx',
+  'production' => 'xxxxxx'
+);
+$phone_number = '2547xxxxxxxx';
 
 
 if (!count(debug_backtrace()))
@@ -27,12 +34,8 @@ if (!count(debug_backtrace()))
 
     //Consume a token
     echo "\n<====== Claim c2b transactions ===>\n";
-    $transaction_id = 'LGJ3M7XVX7';
-    $phone_number = '254705005653';
-    $till_number = array(
-      'integ' => '508584', # 291222 doesnt exists
-      'production' => '415555'
-    );
+    $transaction_id = 'LGJ4M7XVX7';
+
     $response = $nifty_client->c2b->claim_transaction(
      $transaction_id, $phone_number, $till_number['integ']);
     var_dump($response);
@@ -58,7 +61,6 @@ if (!count(debug_backtrace()))
     // Online checkout transactions
     echo "\n<====== Initiate Online transaction transaction ===>\n";
     $transaction_id = bin2hex(openssl_random_pseudo_bytes(32));
-    $phone_number = '254705005653';
     $transaction_amount = 10;
     $callback_url = 'http://merchant_url.com/call/me/back';
     $service_reference_id = 'tag2';
@@ -71,7 +73,6 @@ if (!count(debug_backtrace()))
     // List online checkout transactions
     echo "\n<======  List online transactions ===>\n";
     $transaction_id = bin2hex(openssl_random_pseudo_bytes(32));
-    $phone_number = '254705005653';
     $callback_url = 'http://merchant_url.com/call/me/back';
     $service_reference_id = 'tag1';
     $data = array(

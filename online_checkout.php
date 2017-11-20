@@ -7,7 +7,7 @@ class OnlineCheckout extends NiftyClientBase
     private function get_online_checkout_url()
     {
         $url_part = '/user/'. $this->user_id. '/mpesa/online-checkout';
-        return $this->url_base. $url_part;
+        return $this->api_base. $url_part;
     }
 
     /**
