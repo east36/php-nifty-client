@@ -29,7 +29,7 @@ $config = array(
   'access_id' => '<access-id>',
   'secret_key' => '<secret-id>',
   'user_id' => '<user-id>',
-  'url_base' => "http://api.integ.nifty.co.ke/api/v1",
+  'api_base' => "http://api.integ.nifty.co.ke/api/v1",
 );
 ```
 3. Follow the instructions as specified in the [docs](docs.nifty.co.ke)
